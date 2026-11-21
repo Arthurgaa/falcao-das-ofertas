@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lobo das Ofertas — Promoções no seu WhatsApp</title>
+<meta name="description" content="As melhores promoções do Mercado Livre, todos os dias, direto no seu WhatsApp. Grátis.">
+<meta property="og:title" content="🐺🔥 Lobo das Ofertas">
+<meta property="og:description" content="O lobo caça as ofertas. Você só economiza. Entre grátis no grupo do WhatsApp.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f1014">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐺</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f1014;
+    --card: #17181e;
+    --line: #262833;
+    --text: #f4f4f6;
+    --muted: #a2a5b4;
+    --fogo1: #ff6a1a;
+    --fogo2: #ffb21a;
+    --zap: #25d366;
+    --zap-escuro: #1faa52;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
+  body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px; line-height: 1.55;
+    padding: max(24px, env(safe-area-inset-top)) 20px max(32px, env(safe-area-inset-bottom));
+    background:
+      radial-gradient(600px 300px at 80% -80px, rgba(255,106,26,.16), transparent 70%),
+      radial-gradient(500px 260px at 0% 10%, rgba(255,178,26,.07), transparent 70%),
+      var(--bg);
+    min-height: 100vh;
+  }
+  .wrap { max-width: 540px; margin: 0 auto; }
+
+  header { display: flex; align-items: center; gap: 12px; padding: 16px 0 56px; }
+  .logo {
+    width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+    background: linear-gradient(145deg, #23252f, #16171d); border: 1px solid var(--line);
+    font-size: 24px;
+  }
+  header b { font-weight: 700; font-size: 17px; letter-spacing: -.01em; }
+
+  h1 {
+    font-family: "Bricolage Grotesque", Inter, system-ui, sans-serif;
+    font-weight: 800; font-size: clamp(42px, 11vw, 64px); line-height: 1.02;
+    letter-spacing: -.035em; margin: 0 0 20px;
+  }
+  .grifo { position: relative; white-space: nowrap; }
+  .grifo::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 6px; border-radius: 6px;
+    background: linear-gradient(90deg, var(--fogo1), var(--fogo2));
+  }
+  .fogo {
+    background: linear-gradient(90deg, var(--fogo1), var(--fogo2));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .sub { color: var(--muted); font-size: 18px; margin: 0 0 32px; max-width: 30em; }
+
+  .cta {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    width: 100%; padding: 16px 20px; border-radius: 14px;
+    background: var(--zap); color: #06210f; text-decoration: none;
+    font-weight: 700; font-size: 18px;
+    box-shadow: 0 10px 30px -10px rgba(37,211,102,.55);
+    transition: transform .15s ease, background .15s ease;
+  }
+  .cta:hover { background: #2fe072; transform: translateY(-1px); }
+  .cta:active { transform: translateY(1px); }
+  .cta svg { width: 26px; height: 26px; flex: none; }
+  .cta small { display: block; font-weight: 500; font-size: 13px; opacity: .8; }
+  .dica { text-align: center; color: var(--muted); font-size: 14px; margin: 12px 0 0; }
+  .dica b { color: var(--zap); }
+
+  hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0; }
+
+  h2 {
+    font-family: "Bricolage Grotesque", Inter, system-ui, sans-serif;
+    font-weight: 800; font-size: 28px; letter-spacing: -.02em; margin: 0 0 20px;
+  }
+  ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; counter-reset: n; }
+  ol li { counter-increment: n; display: flex; gap: 14px; align-items: baseline; }
+  ol li::before {
+    content: counter(n); flex: none; width: 28px; height: 28px; border-radius: 8px;
+    display: grid; place-items: center; font-weight: 700; font-size: 14px;
+    background: rgba(255,106,26,.14); color: var(--fogo2); transform: translateY(5px);
+  }
+  ol b { color: var(--text); }
+  ol span { color: var(--muted); }
+
+  /* exemplo de mensagem do grupo */
+  .chat {
+    background: #0b141a; border: 1px solid var(--line); border-radius: 18px; padding: 18px;
+    background-image: radial-gradient(rgba(255,255,255,.025) 1px, transparent 1px); background-size: 14px 14px;
+  }
+  .chat-topo { display: flex; align-items: center; gap: 10px; padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid #1f2c33; }
+  .chat-topo .logo { width: 36px; height: 36px; font-size: 19px; border-radius: 50%; }
+  .chat-topo b { font-size: 15px; display: block; }
+  .chat-topo small { color: #8696a0; font-size: 12px; }
+  .bolha {
+    background: #005c4b; border-radius: 10px 0 10px 10px; padding: 10px 12px 8px; margin-left: auto;
+    max-width: 92%; font-size: 14.5px; line-height: 1.45; color: #e9edef;
+  }
+  .bolha s { opacity: .75; }
+  .bolha a { color: #53bdeb; word-break: break-all; text-decoration: underline; }
+  .bolha .hora { display: block; text-align: right; font-size: 11px; color: #a6c9c0; margin-top: 2px; }
+  .legenda { color: var(--muted); font-size: 14px; text-align: center; margin: 12px 0 0; }
+
+  footer { color: #737686; font-size: 13px; margin-top: 56px; line-height: 1.6; }
+  footer p { margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo" aria-hidden="true">🐺</div>
+    <b>Lobo das Ofertas</b>
+  </header>
+
+  <h1>O lobo <span class="grifo">caça</span> as ofertas.<br><span class="fogo">Você só economiza.</span></h1>
+  <p class="sub">Promoções de verdade do Mercado Livre, o dia inteiro, direto no seu WhatsApp. É grátis.</p>
+
+  <a class="cta js-grupo" href="#" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.4 9.4 0 0 1 9.43 9.44c0 5.2-4.24 9.43-9.44 9.43m8.03-17.46A11.27 11.27 0 0 0 12.05.72C5.8.72.7 5.8.7 12.07c0 2 .52 3.95 1.52 5.67L.6 23.6l6-1.57a11.3 11.3 0 0 0 5.43 1.38h.01c6.26 0 11.35-5.09 11.35-11.35 0-3.03-1.18-5.88-3.32-8.02"/></svg>
+    <span>Entrar no grupo do WhatsApp<small>grátis · só admins postam, zero bagunça</small></span>
+  </a>
+  <p class="dica">No WhatsApp, toque em <b>Entrar no grupo</b>.</p>
+
+  <hr>
+
+  <h2>Por que entrar?</h2>
+  <ol>
+    <li><div><b>Ofertas o dia todo.</b> <span>A promoção aparece e você fica sabendo na hora, das 8h às 22h.</span></div></li>
+    <li><div><b>Só desconto de verdade.</b> <span>Filtramos as ofertas: entra no grupo o que tem desconto que vale a pena.</span></div></li>
+    <li><div><b>Grátis e sem spam.</b> <span>Sem cadastro. Grupo só de avisos, sem conversa paralela. Saiu quando quiser.</span></div></li>
+  </ol>
+
+  <hr>
+
+  <h2>Como chegam as ofertas</h2>
+  <div class="chat" aria-label="Exemplo de mensagem do grupo">
+    <div class="chat-topo">
+      <div class="logo" aria-hidden="true">🐺</div>
+      <div><b>Lobo das Ofertas 🐺🔥</b><small>Somente admins podem enviar mensagens</small></div>
+    </div>
+    <div class="bolha">
+      🔥 <b>Creatina Monohidratada 1kg 100% Pura</b><br><br>
+      De <s>R$ 159,90</s> por <b>R$ 78,92</b> 🔥<br>
+      💥 <b>50% OFF</b><br>
+      🚚 Frete grátis<br><br>
+      🛒 <a>mercadolivre.com.br/…</a>
+      <span class="hora">16:28 ✓✓</span>
+    </div>
+  </div>
+  <p class="legenda">Exemplo ilustrativo. Preços mudam rápido, por isso vale estar no grupo.</p>
+
+  <hr>
+
+  <h2>Bora economizar?</h2>
+  <a class="cta js-grupo" href="#" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.4 9.4 0 0 1 9.43 9.44c0 5.2-4.24 9.43-9.44 9.43m8.03-17.46A11.27 11.27 0 0 0 12.05.72C5.8.72.7 5.8.7 12.07c0 2 .52 3.95 1.52 5.67L.6 23.6l6-1.57a11.3 11.3 0 0 0 5.43 1.38h.01c6.26 0 11.35-5.09 11.35-11.35 0-3.03-1.18-5.88-3.32-8.02"/></svg>
+    <span>Entrar no grupo do WhatsApp</span>
+  </a>
+  <p class="dica">No WhatsApp, toque em <b>Entrar no grupo</b>.</p>
+
+  <footer>
+    <p>Feito por quem também odeia pagar caro.</p>
+    <p>Somos afiliados do Mercado Livre: comprando pelos nossos links podemos receber uma comissão, sem nenhum custo extra pra você. Preços e estoque podem mudar a qualquer momento.</p>
+    <p>Lobo das Ofertas © 2026</p>
+  </footer>
+</div>
+
+<script>
+  // 👉 Link de convite do grupo (WhatsApp > Dados do grupo > Convidar via link)
+  const LINK_DO_GRUPO = 'https://chat.whatsapp.com/COLE-O-LINK-AQUI';
+
+  document.querySelectorAll('.js-grupo').forEach((a) => { a.href = LINK_DO_GRUPO; });
+
+  // Acessando com ?ir=1 no final do endereço, já redireciona direto pro grupo
+  if (new URLSearchParams(location.search).has('ir')) location.replace(LINK_DO_GRUPO);
+</script>
+</body>
+</html>

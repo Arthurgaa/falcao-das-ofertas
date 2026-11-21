@@ -77,6 +77,9 @@
   .cta small { display: block; font-weight: 500; font-size: 13px; opacity: .8; }
   .dica { text-align: center; color: var(--muted); font-size: 14px; margin: 12px 0 0; }
   .dica b { color: var(--zap); }
+  .alt { text-align: center; font-size: 14px; margin: 10px 0 0; color: var(--muted); }
+  .alt a { color: var(--fogo2); font-weight: 600; text-underline-offset: 3px; }
+  .cta .js-titulo small { display: block; }
 
   hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0; }
 
@@ -127,19 +130,20 @@
   <h1>O lobo <span class="grifo">caça</span> as ofertas.<br><span class="fogo">Você só economiza.</span></h1>
   <p class="sub">Promoções de verdade do Mercado Livre, o dia inteiro, direto no seu WhatsApp. É grátis.</p>
 
-  <a class="cta js-grupo" href="#" rel="noopener">
+  <a class="cta js-principal" href="#" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.4 9.4 0 0 1 9.43 9.44c0 5.2-4.24 9.43-9.44 9.43m8.03-17.46A11.27 11.27 0 0 0 12.05.72C5.8.72.7 5.8.7 12.07c0 2 .52 3.95 1.52 5.67L.6 23.6l6-1.57a11.3 11.3 0 0 0 5.43 1.38h.01c6.26 0 11.35-5.09 11.35-11.35 0-3.03-1.18-5.88-3.32-8.02"/></svg>
-    <span>Entrar no grupo do WhatsApp<small>grátis · só admins postam, zero bagunça</small></span>
+    <span class="js-titulo">Entrar no grupo do WhatsApp</span>
   </a>
-  <p class="dica">No WhatsApp, toque em <b>Entrar no grupo</b>.</p>
+  <p class="dica">No WhatsApp, toque em <b class="js-acao">Entrar no grupo</b>.</p>
+  <p class="alt js-alt" hidden>Prefere receber no grupo? <a class="js-grupo" href="#" rel="noopener">Entrar no grupo &rarr;</a></p>
 
   <hr>
 
-  <h2>Por que entrar?</h2>
+  <h2>Por que acompanhar?</h2>
   <ol>
     <li><div><b>Ofertas o dia todo.</b> <span>A promoção aparece e você fica sabendo na hora, das 8h às 22h.</span></div></li>
     <li><div><b>Só desconto de verdade.</b> <span>Filtramos as ofertas: entra no grupo o que tem desconto que vale a pena.</span></div></li>
-    <li><div><b>Grátis e sem spam.</b> <span>Sem cadastro. Grupo só de avisos, sem conversa paralela. Saiu quando quiser.</span></div></li>
+    <li><div><b>Grátis e sem spam.</b> <span>Sem cadastro, só ofertas, sem conversa paralela. Sai quando quiser.</span></div></li>
   </ol>
 
   <hr>
@@ -148,7 +152,7 @@
   <div class="chat" aria-label="Exemplo de mensagem do grupo">
     <div class="chat-topo">
       <div class="logo" aria-hidden="true">🐺</div>
-      <div><b>Lobo das Ofertas 🐺🔥</b><small>Somente admins podem enviar mensagens</small></div>
+      <div><b>Lobo das Ofertas 🐺🔥</b><small>Ofertas o dia todo</small></div>
     </div>
     <div class="bolha">
       🔥 <b>Creatina Monohidratada 1kg 100% Pura</b><br><br>
@@ -159,16 +163,17 @@
       <span class="hora">16:28 ✓✓</span>
     </div>
   </div>
-  <p class="legenda">Exemplo ilustrativo. Preços mudam rápido, por isso vale estar no grupo.</p>
+  <p class="legenda">Exemplo ilustrativo. Preços mudam rápido, por isso vale estar com a gente no WhatsApp.</p>
 
   <hr>
 
   <h2>Bora economizar?</h2>
-  <a class="cta js-grupo" href="#" rel="noopener">
+  <a class="cta js-principal" href="#" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.4 9.4 0 0 1 9.43 9.44c0 5.2-4.24 9.43-9.44 9.43m8.03-17.46A11.27 11.27 0 0 0 12.05.72C5.8.72.7 5.8.7 12.07c0 2 .52 3.95 1.52 5.67L.6 23.6l6-1.57a11.3 11.3 0 0 0 5.43 1.38h.01c6.26 0 11.35-5.09 11.35-11.35 0-3.03-1.18-5.88-3.32-8.02"/></svg>
-    <span>Entrar no grupo do WhatsApp</span>
+    <span class="js-titulo">Entrar no grupo do WhatsApp</span>
   </a>
-  <p class="dica">No WhatsApp, toque em <b>Entrar no grupo</b>.</p>
+  <p class="dica">No WhatsApp, toque em <b class="js-acao">Entrar no grupo</b>.</p>
+  <p class="alt js-alt" hidden>Prefere receber no grupo? <a class="js-grupo" href="#" rel="noopener">Entrar no grupo &rarr;</a></p>
 
   <footer>
     <p>Feito por quem também odeia pagar caro.</p>
@@ -180,11 +185,29 @@
 <script>
   // 👉 Link de convite do grupo (WhatsApp > Dados do grupo > Convidar via link)
   const LINK_DO_GRUPO = 'https://chat.whatsapp.com/C2RXRANEYpI3eZhNSPz2ss';
+  // 👉 Link do canal (Dados do canal > Copiar link). Vazio = botão principal vai pro grupo.
+  const LINK_DO_CANAL = 'https://whatsapp.com/channel/0029VbE18dW7j6g8tQxphk0f';
 
+  const temCanal = LINK_DO_CANAL.startsWith('https://');
+  const principal = temCanal ? LINK_DO_CANAL : LINK_DO_GRUPO;
+
+  document.querySelectorAll('.js-principal').forEach((a) => { a.href = principal; });
   document.querySelectorAll('.js-grupo').forEach((a) => { a.href = LINK_DO_GRUPO; });
+  if (temCanal) {
+    document.querySelectorAll('.js-titulo').forEach((s, i) => {
+      s.innerHTML = 'Seguir o canal no WhatsApp' + (i === 0 ? '<small>grátis · seu número fica escondido</small>' : '');
+    });
+    document.querySelectorAll('.js-acao').forEach((b) => { b.textContent = 'Seguir'; });
+    document.querySelectorAll('.js-alt').forEach((p) => { p.hidden = false; });
+  } else {
+    const t = document.querySelector('.js-titulo');
+    if (t) t.innerHTML = 'Entrar no grupo do WhatsApp<small>grátis · só admins postam, zero bagunça</small>';
+  }
 
-  // Acessando com ?ir=1 no final do endereço, já redireciona direto pro grupo
-  if (new URLSearchParams(location.search).has('ir')) location.replace(LINK_DO_GRUPO);
+  // Atalhos: ?ir=1 vai direto pro destino principal; ?grupo=1 vai direto pro grupo
+  const q = new URLSearchParams(location.search);
+  if (q.has('grupo')) location.replace(LINK_DO_GRUPO);
+  else if (q.has('ir')) location.replace(principal);
 </script>
 </body>
 </html>

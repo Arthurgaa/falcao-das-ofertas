@@ -3,13 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lobo das Ofertas — Promoções no seu WhatsApp</title>
+<title>Falcão das Ofertas — Promoções no seu WhatsApp</title>
 <meta name="description" content="As melhores promoções do Mercado Livre e do AliExpress, todos os dias, direto no seu WhatsApp. Grátis.">
-<meta property="og:title" content="🐺🔥 Lobo das Ofertas">
-<meta property="og:description" content="O lobo caça as ofertas. Você só economiza. Entre grátis no grupo do WhatsApp.">
+<meta property="og:title" content="🦅🔥 Falcão das Ofertas">
+<meta property="og:description" content="O falcão caça as ofertas. Você só economiza. Entre grátis no grupo do WhatsApp.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://falcao-das-ofertas.vercel.app/">
+<meta property="og:image" content="https://falcao-das-ofertas.vercel.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0f1014">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐺</text></svg>">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -20,8 +26,8 @@
     --line: #262833;
     --text: #f4f4f6;
     --muted: #a2a5b4;
-    --fogo1: #ff6a1a;
-    --fogo2: #ffb21a;
+    --fogo1: #f5a300;
+    --fogo2: #ffd23f;
     --zap: #25d366;
     --zap-escuro: #1faa52;
   }
@@ -32,8 +38,8 @@
     font-size: 16px; line-height: 1.55;
     padding: max(24px, env(safe-area-inset-top)) 20px max(32px, env(safe-area-inset-bottom));
     background:
-      radial-gradient(600px 300px at 80% -80px, rgba(255,106,26,.16), transparent 70%),
-      radial-gradient(500px 260px at 0% 10%, rgba(255,178,26,.07), transparent 70%),
+      radial-gradient(600px 300px at 80% -80px, rgba(245,170,0,.16), transparent 70%),
+      radial-gradient(500px 260px at 0% 10%, rgba(255,210,63,.07), transparent 70%),
       var(--bg);
     min-height: 100vh;
   }
@@ -41,9 +47,8 @@
 
   header { display: flex; align-items: center; gap: 12px; padding: 16px 0 56px; }
   .logo {
-    width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
-    background: linear-gradient(145deg, #23252f, #16171d); border: 1px solid var(--line);
-    font-size: 24px;
+    width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex: none;
+    border: 2px solid var(--fogo1); box-shadow: 0 0 0 4px rgba(245,170,0,.12);
   }
   header b { font-weight: 700; font-size: 17px; letter-spacing: -.01em; }
 
@@ -92,7 +97,7 @@
   ol li::before {
     content: counter(n); flex: none; width: 28px; height: 28px; border-radius: 8px;
     display: grid; place-items: center; font-weight: 700; font-size: 14px;
-    background: rgba(255,106,26,.14); color: var(--fogo2); transform: translateY(5px);
+    background: rgba(245,170,0,.14); color: var(--fogo2); transform: translateY(5px);
   }
   ol b { color: var(--text); }
   ol span { color: var(--muted); }
@@ -103,7 +108,7 @@
     background-image: radial-gradient(rgba(255,255,255,.025) 1px, transparent 1px); background-size: 14px 14px;
   }
   .chat-topo { display: flex; align-items: center; gap: 10px; padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid #1f2c33; }
-  .chat-topo .logo { width: 36px; height: 36px; font-size: 19px; border-radius: 50%; }
+  .chat-topo .logo { width: 38px; height: 38px; box-shadow: none; }
   .chat-topo b { font-size: 15px; display: block; }
   .chat-topo small { color: #8696a0; font-size: 12px; }
   .bolha {
@@ -127,11 +132,11 @@
 <div class="wrap">
 
   <header>
-    <div class="logo" aria-hidden="true">🐺</div>
-    <b>Lobo das Ofertas</b>
+    <img class="logo" src="/logo.png" alt="" width="48" height="48">
+    <b>Falcão das Ofertas</b>
   </header>
 
-  <h1>O lobo <span class="grifo">caça</span> as ofertas.<br><span class="fogo">Você só economiza.</span></h1>
+  <h1>O falcão <span class="grifo">caça</span> as ofertas.<br><span class="fogo">Você só economiza.</span></h1>
   <p class="sub">Promoções de verdade do <b class="loja-ml">Mercado Livre</b> e do <b class="loja-ali">AliExpress</b>, o dia inteiro, direto no seu WhatsApp. É grátis.</p>
 
   <a class="cta js-principal" href="#" rel="noopener">
@@ -155,8 +160,8 @@
   <h2>Como chegam as ofertas</h2>
   <div class="chat" aria-label="Exemplo de mensagem do grupo">
     <div class="chat-topo">
-      <div class="logo" aria-hidden="true">🐺</div>
-      <div><b>Lobo das Ofertas 🐺🔥</b><small>Ofertas o dia todo</small></div>
+      <img class="logo" src="/logo.png" alt="" width="48" height="48">
+      <div><b>Falcão das Ofertas 🦅🔥</b><small>Ofertas o dia todo</small></div>
     </div>
     <div class="bolha">
       🔥 <b>Creatina Monohidratada 1kg 100% Pura</b><br><br>
@@ -192,11 +197,16 @@
   <footer>
     <p>Feito por quem também odeia pagar caro.</p>
     <p>Somos afiliados do Mercado Livre e do AliExpress: comprando pelos nossos links podemos receber uma comissão, sem nenhum custo extra pra você. Preços e estoque podem mudar a qualquer momento.</p>
-    <p>Lobo das Ofertas © 2026</p>
+    <p>Falcão das Ofertas © 2026</p>
   </footer>
 </div>
 
 <script>
+  // endereço antigo (lobo-das-ofertas) leva para o novo, mantendo os atalhos (?ir=1, ?grupo=1)
+  if (location.hostname === 'lobo-das-ofertas.vercel.app') {
+    location.replace('https://falcao-das-ofertas.vercel.app/' + location.search + location.hash);
+  }
+
   // 👉 Link de convite do grupo (WhatsApp > Dados do grupo > Convidar via link)
   const LINK_DO_GRUPO = 'https://chat.whatsapp.com/C2RXRANEYpI3eZhNSPz2ss';
   // 👉 Link do canal (Dados do canal > Copiar link). Vazio = botão principal vai pro grupo.
